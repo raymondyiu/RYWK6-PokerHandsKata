@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5336e213-0724-415a-b0c5-aa9299767fac" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/StraightFlush.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +19,7 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
