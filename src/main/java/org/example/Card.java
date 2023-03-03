@@ -1,8 +1,8 @@
 package org.example;
 
 public class Card {
-    String CardValue;
-    String suit;
+    CardValue CardValue;
+    Suit suit;
     String symbol;
     public Card(String symbol) {
         this.symbol = symbol;
