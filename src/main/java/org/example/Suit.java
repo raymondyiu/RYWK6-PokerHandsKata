@@ -7,7 +7,7 @@ public enum Suit {
     Club("C"), Heart("H"), Diamond("D"), Spade("S");
     private final String label;
     Suit (String label) { this.label = label;}
-    private String label() { return label;}
+    public String label() { return label;}
     private static final Map<String, Suit> BY_LABEL = new HashMap<>();
     static {
         for (Suit suit : values()) {

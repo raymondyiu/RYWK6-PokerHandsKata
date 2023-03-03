@@ -16,8 +16,8 @@ public enum CardValue {
         this.label = label;
         this.score = score;
     }
-    private String label() { return label;}
-    private int score() {return score;}
+    public String label() { return label;}
+    public int score() {return score;}
     private static final Map<String, CardValue> BY_LABEL = new HashMap<>();
     static {
         for (CardValue cardValue : values()) {
