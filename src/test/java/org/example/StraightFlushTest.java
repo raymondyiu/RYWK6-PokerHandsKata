@@ -12,12 +12,9 @@ class StraightFlushTest {
     void isMatch() {
         StraightFlush straightFlush = new StraightFlush();
         ArrayList<Card> cards = new ArrayList<Card>();
-        Card card = new Card("1H");
+        Card card = new Card("2H");
         cards.add(card);
         assertTrue(straightFlush.isMatch(cards));
     }
 
-    @Test
-    void getScore() {
-    }
 }

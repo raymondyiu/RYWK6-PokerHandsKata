@@ -22,6 +22,7 @@ public class StraightFlush implements IMatch {
         }
     }
 
+
     @Override
     public boolean isMatch(ArrayList<Card> cards) {
         return false;
