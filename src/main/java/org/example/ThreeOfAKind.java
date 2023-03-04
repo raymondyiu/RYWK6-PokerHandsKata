@@ -28,6 +28,7 @@ public class ThreeOfAKind implements IMatch{
 
         for (CardValue cardValue : CardValue.values()){
             String targetStr = target.get(cardValue.label());
+
             match = cardList.contains(targetStr);
             if (match) {break;}
         }

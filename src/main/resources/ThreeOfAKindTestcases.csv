@@ -1,8 +1,8 @@
 false,TS JS QS KS AS
 false,2H JH QH KH AH
 true,AH AS AC AD 2D
-false,KH KS KD QS QC
-false,2H 2D 3S 3C 3D
+true,KH KS KD QS QC
+true,2H 2D 3S 3C 3D
 false,2H 4H 6H 7H 8H
-true,TS JC QD KS AH
-true,2C 3H 4D 5S 6H
+false,TS JC QD KS AH
+false,2C 3H 4D 5S 6H

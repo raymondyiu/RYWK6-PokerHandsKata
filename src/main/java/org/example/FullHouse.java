@@ -31,7 +31,7 @@ public class FullHouse implements IMatch{
 
         for (CardValue cardValue : CardValue.values()){
             String targetStr = targetThreeOfAKind.get(cardValue.label());
-            //System.out.println("targetStr : "+ targetStr);
+
             if (cardList.contains(targetStr)) {
                 targetPair.remove(cardValue.label());
                 for (CardValue cardValue1 : CardValue.values()) {
