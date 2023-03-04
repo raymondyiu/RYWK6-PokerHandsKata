@@ -17,7 +17,6 @@ public class FourOfAKind implements IMatch{
             for (Suit suit : Suit.values()) {
                 str += cardValue.label();
             }
-            System.out.println("four :" + cardValue.label());
             target.put(cardValue.label(), str);
         }
     }
