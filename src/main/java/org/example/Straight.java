@@ -9,7 +9,6 @@ public class Straight implements IMatch{
     private Rank rank = Rank.Straight;
 
     Straight(){
-        target = new HashMap<>();
         target = "";
         for (CardValue cardValue : CardValue.values()){
                 target += cardValue.label();
