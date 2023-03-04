@@ -39,10 +39,10 @@ public class StraightFlush implements IMatch {
         for (String item : cardSymbolList){
             cardList += item;
         }
-        System.out.println("cardList: "+ cardList);
+
         for (Suit suit : Suit.values()){
             String targetStr = target.get(suit.label());
-            System.out.println("targetStr: "+ targetStr);
+
 
             match = targetStr.contains(cardList);
             if (match) {break;}

@@ -14,20 +14,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FourOfAKindTest {
-    public List<String[]> readCsv(String filename) {
-        List<String[]> allData = new ArrayList<>();
-        try {
-            Path path = Paths.get(
-                    ClassLoader.getSystemResource(filename).toURI());
-            Reader reader = Files.newBufferedReader(path);
-            CSVReader csvReader = new CSVReaderBuilder(reader).build();
-            allData = csvReader.readAll();
 
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-        return allData;
-    }
 
     @Test
     void isGetScore(){
@@ -36,13 +23,15 @@ class FourOfAKindTest {
     }
     @Test
     void isMatch() {
+
         FourOfAKind fourOfAKind = new FourOfAKind();
         ArrayList<Card> cards = new ArrayList<Card>();
         boolean expectedResult=true;
         Card card;
+        ReadCsv readCsv = new ReadCsv("FourOfAKindTestcases.csv");
 
         List<String[]> csvTestCases = new ArrayList<>();
-        csvTestCases = readCsv("StraighOfAKindTestcases.csv");
+        csvTestCases = readCsv.readCsv();
 
         for (String[] item : csvTestCases) {
 
@@ -61,5 +50,6 @@ class FourOfAKindTest {
             }
             cards.clear();
         }
+
     }
 }

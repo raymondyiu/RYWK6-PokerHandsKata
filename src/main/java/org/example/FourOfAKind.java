@@ -30,11 +30,12 @@ public class FourOfAKind implements IMatch{
         for (Card card : cards){
             cardList += card.getCardValue().label();
         }
+
         for (CardValue cardValue : CardValue.values()){
             String targetStr = target.get(cardValue.label());
             match = cardList.contains(targetStr);
             if (match) {break;}
         }
-        return false;
+        return match;
     }
 }
