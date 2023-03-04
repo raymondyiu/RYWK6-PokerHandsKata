@@ -26,15 +26,15 @@ public class Flush implements IMatch{
     }
 
     public boolean isMatch(ArrayList<Card> cards) {
-        String cardList="";
+        String suitList="";
         boolean match=false;
         for (Card card : cards){
-            cardList += card.getCardValue().label();
+            suitList += card.getSuit().label();
         }
 
-        for (CardValue cardValue : CardValue.values()){
-            String targetStr = target.get(cardValue.label());
-            match = cardList.contains(targetStr);
+        for (Suit suit : Suit.values()){
+            String targetStr = target.get(suit.label());
+            match = suitList.contains(targetStr);
             if (match) {break;}
         }
         return match;

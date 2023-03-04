@@ -16,6 +16,7 @@ public class Card {
     }
     public String getSymbol() {return symbol;}
     public CardValue getCardValue() { return cardValue;}
+    public Suit getSuit() { return suit;}
 
     private void parse(String cardStr) {
         cardStr = cardStr.toUpperCase();
