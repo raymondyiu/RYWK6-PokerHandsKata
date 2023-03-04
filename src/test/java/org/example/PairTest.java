@@ -8,6 +8,8 @@ class PairTest {
 
     @Test
     void getScore() {
+        Pair pair = new Pair();
+        assertEquals(1000, pair.getScore());
     }
 
     @Test

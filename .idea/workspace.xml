@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5336e213-0724-415a-b0c5-aa9299767fac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/TwoPairsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TwoPairs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TwoPairs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PairTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/PairTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +64,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TwoPairsTest.isMatch">
+  <component name="RunManager" selected="JUnit.PairTest.getScore">
     <configuration name="FullHouseTest.isMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RYWK6-PokerHandsKata" />
       <extension name="coverage">
@@ -83,7 +81,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreeOfAKindTest.isMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PairTest.getScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RYWK6-PokerHandsKata" />
       <extension name="coverage">
         <pattern>
@@ -92,8 +90,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.ThreeOfAKindTest" />
-      <option name="METHOD_NAME" value="isMatch" />
+      <option name="MAIN_CLASS_NAME" value="org.example.PairTest" />
+      <option name="METHOD_NAME" value="getScore" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PairTest.getScore" />
         <item itemvalue="JUnit.TwoPairsTest.isMatch" />
         <item itemvalue="JUnit.FullHouseTest.isMatch" />
         <item itemvalue="JUnit.TwoPairsTest" />
         <item itemvalue="JUnit.TwoPairsTest.getScore" />
-        <item itemvalue="JUnit.ThreeOfAKindTest.isMatch" />
       </list>
     </recent_temporary>
   </component>
