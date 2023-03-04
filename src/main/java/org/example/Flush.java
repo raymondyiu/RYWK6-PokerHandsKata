@@ -8,15 +8,15 @@ public class Flush implements IMatch{
     private Map<String, String> target;
     private Rank rank = Rank.Flush;
 
-    StraightFlush(){
+    Flush(){
         target = new HashMap<>();
 
         for (Suit suit : Suit.values()){
             String str="";
-            for (int i; i<5; i++){
+            for (int i=0; i<5; i++){
                 str += suit.label();
             }
-            System.out.println("target: " + str);
+
             target.put(suit.label(), str);
         }
     }
