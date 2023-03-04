@@ -5,17 +5,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TwoPairs implements IMatch{
-    private Map<String, String> target1;
-    private Map<String, String> target2;
+    private Map<String, String> target;
     private Rank rank = Rank.TwoPairs;
 
     TwoPairs(){
-        target1 = new HashMap<>();
-        target2 = new HashMap<>();
-
+        target = new HashMap<>();
         for (CardValue cardValue : CardValue.values()){
-            target1.put(cardValue.label(), cardValue.label()+cardValue.label());
-            target2.put(cardValue.label(), cardValue.label()+cardValue.label());
+            target.put(cardValue.label(), cardValue.label()+cardValue.label());
         }
     }
     public int getScore() {
@@ -23,18 +19,20 @@ public class TwoPairs implements IMatch{
     }
     public boolean isMatch(ArrayList<Card> cards) {
         String cardList="";
+        Map<String,String> targetCopy = new HashMap<>();
+        targetCopy.putAll(target);
         boolean match=false;
         for (Card card : cards){
             cardList += card.getCardValue().label();
         }
 
         for (CardValue cardValue : CardValue.values()){
-            String targetStr1 = target1.get(cardValue.label());
+            String targetStr1 = target.get(cardValue.label());
 
             if (cardList.contains(targetStr1)) {
-                target2.remove(cardValue.label());
+                targetCopy.remove(cardValue.label());
                 for (CardValue cardValue1 : CardValue.values()) {
-                    String targetStr2 = target2.get(cardValue1.label());
+                    String targetStr2 = targetCopy.get(cardValue1.label());
                     if (targetStr2 != null) {
 
                         match = cardList.contains(targetStr2);

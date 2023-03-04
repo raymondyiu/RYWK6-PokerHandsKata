@@ -25,6 +25,9 @@ public class FullHouse implements IMatch{
     public boolean isMatch(ArrayList<Card> cards) {
         String cardList="";
         boolean match=false;
+        Map<String, String> targetPairCopy = new HashMap<>();
+        targetPairCopy.putAll(targetPair);
+
         for (Card card : cards){
             cardList += card.getCardValue().label();
         }
@@ -33,9 +36,9 @@ public class FullHouse implements IMatch{
             String targetStr = targetThreeOfAKind.get(cardValue.label());
 
             if (cardList.contains(targetStr)) {
-                targetPair.remove(cardValue.label());
+                targetPairCopy.remove(cardValue.label());
                 for (CardValue cardValue1 : CardValue.values()) {
-                        String targetStr1 = targetPair.get(cardValue1.label());
+                        String targetStr1 = targetPairCopy.get(cardValue1.label());
                         if (targetStr1 != null) {
 
                             match = cardList.contains(targetStr1);
