@@ -1,6 +1,10 @@
 package org.example;
 
 import java.lang.Exception;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class Card {
@@ -11,6 +15,7 @@ public class Card {
         this.parse(cardStr);
     }
     public String getSymbol() {return symbol;}
+    public CardValue getCardValue() { return cardValue;}
 
     private void parse(String cardStr) {
         cardStr = cardStr.toUpperCase();
@@ -27,5 +32,17 @@ public class Card {
         }
         symbol = cardStr;
     }
+
+    public ArrayList<Card> sort (ArrayList<Card> cards){
+        Card tmp;
+
+        for(int i=0; i<cards.size(); i++){
+
+
+        }
+
+        return null;
+    }
+
 
 }

@@ -24,8 +24,18 @@ public enum CardValue {
             BY_LABEL.put(cardValue.label, cardValue);
         }
     }
+    private static final Map<Integer, CardValue> BY_SCORE = new HashMap<>();
+    static {
+        for (CardValue cardValue : values()) {
+            BY_SCORE.put(Integer.valueOf(cardValue.score), cardValue);
+        }
+    }
+
     public static CardValue valueOfLabel(String label) {
         return BY_LABEL.get(label);
+    }
+    public static CardValue valueOfScore(int score){
+        return BY_SCORE.get(Integer.valueOf(score));
     }
 
 }
