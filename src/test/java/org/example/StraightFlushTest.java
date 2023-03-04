@@ -29,6 +29,12 @@ class StraightFlushTest {
         }
         return allData;
     }
+
+    @Test
+    void isGetScore(){
+        StraightFlush straightFlush = new StraightFlush();
+        assertEquals(8000, straightFlush.getScore());
+    }
     @Test
     void isMatchCheck() {
         StraightFlush straightFlush = new StraightFlush();
@@ -37,7 +43,8 @@ class StraightFlushTest {
         Card card;
 
         List<String[]> csvTestCases = new ArrayList<>();
-        csvTestCases = readCsv("testcases.csv");
+        csvTestCases = readCsv("StraighOfAKindTestcases.csv");
+
         for (String[] item : csvTestCases) {
 
             expectedResult = Boolean.parseBoolean(item[0]);
@@ -47,11 +54,13 @@ class StraightFlushTest {
                 card = new Card(cardStr);
                 cards.add(card);
             }
-        }
-        if (expectedResult) {
-            assertTrue(straightFlush.isMatch(cards));
-        } else {
-            assertFalse(straightFlush.isMatch(cards));
+
+            if (expectedResult) {
+                assertTrue(straightFlush.isMatch(cards));
+            } else {
+                assertFalse(straightFlush.isMatch(cards));
+            }
+            cards.clear();
         }
     }
 

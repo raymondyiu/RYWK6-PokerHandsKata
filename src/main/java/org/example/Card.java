@@ -33,15 +33,12 @@ public class Card {
         symbol = cardStr;
     }
 
-    public ArrayList<Card> sort (ArrayList<Card> cards){
+    public static ArrayList<Card> sort (ArrayList<Card> cards){
         Card tmp;
 
-        for(int i=0; i<cards.size(); i++){
 
 
-        }
-
-        return null;
+        return cards;
     }
 
 

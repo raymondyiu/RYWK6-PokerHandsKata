@@ -10,7 +10,6 @@ public class StraightFlush implements IMatch {
     private Map<String, String> target;
     private Rank rank = Rank.StraightFlush;
 
-
     StraightFlush(){
         target = new HashMap<>();
 
@@ -24,7 +23,9 @@ public class StraightFlush implements IMatch {
         }
     }
 
-
+    public int getScore() {
+        return rank.score();
+    }
     @Override
     public boolean isMatch(ArrayList<Card> cards) {
         String cardList="";
@@ -49,8 +50,4 @@ public class StraightFlush implements IMatch {
         return match;
     }
 
-    @Override
-    public int getScore() {
-        return 0;
-    }
 }

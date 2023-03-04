@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5336e213-0724-415a-b0c5-aa9299767fac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/testcases.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CardValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CardValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FourOfAKind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FourOfAKind.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StraightFlush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StraightFlush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FourOfAKindTestcases.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FourOfAKindTestcases.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/FourOfAKindTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/FourOfAKindTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/StraightFlushTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/StraightFlushTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +23,8 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -51,12 +52,16 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": ""
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/Users/raymond/techReturners/week6/RYWK6-PokerHandsKata/src/main/resources"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -65,7 +70,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StraightFlushTest">
+  <component name="RunManager" selected="JUnit.StraightFlushTest.isGetScore">
     <configuration name="CardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RYWK6-PokerHandsKata" />
       <extension name="coverage">
@@ -81,22 +86,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CardTest.CheckCardParseExceptions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RYWK6-PokerHandsKata" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.CardTest" />
-      <option name="METHOD_NAME" value="CheckCardParseExceptions" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="StraightFlushTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RYWK6-PokerHandsKata" />
       <extension name="coverage">
@@ -108,6 +97,22 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.StraightFlushTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StraightFlushTest.isGetScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RYWK6-PokerHandsKata" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.StraightFlushTest" />
+      <option name="METHOD_NAME" value="isGetScore" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -146,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.StraightFlushTest" />
+        <item itemvalue="JUnit.StraightFlushTest.isGetScore" />
         <item itemvalue="JUnit.StraightFlushTest.isMatchCheck" />
+        <item itemvalue="JUnit.StraightFlushTest" />
         <item itemvalue="JUnit.StraightFlushTest.isMatch" />
         <item itemvalue="JUnit.CardTest" />
-        <item itemvalue="JUnit.CardTest.CheckCardParseExceptions" />
       </list>
     </recent_temporary>
   </component>
@@ -164,16 +169,5 @@
       <updated>1677743838332</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/example/StraightFlushTest.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
