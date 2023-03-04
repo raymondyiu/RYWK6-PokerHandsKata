@@ -11,8 +11,8 @@ class FullHouseTest {
 
     @Test
     void getScore() {
-        FourOfAKind fourOfAKind = new FourOfAKind();
-        assertEquals(6000, fourOfAKind.getScore());
+        FullHouse fullHouse= new FullHouse();
+        assertEquals(6000, fullHouse.getScore());
     }
 
     @Test

@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5336e213-0724-415a-b0c5-aa9299767fac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ReadCsv.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FourOfAKind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FourOfAKind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StraightFlush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StraightFlush.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/StraighOfAKindTestcases.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/StraightFlushTestcases.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/FourOfAKindTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/FourOfAKindTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/StraightFlushTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/StraightFlushTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FullHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FullHouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/FullHouseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/FullHouseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +19,8 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -70,7 +66,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FourOfAKindTest">
+  <component name="RunManager" selected="JUnit.FullHouseTest.isMatch">
     <configuration name="FourOfAKindTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RYWK6-PokerHandsKata" />
       <extension name="coverage">
@@ -82,22 +78,6 @@
       <option name="PACKAGE_NAME" value="org.example" />
       <option name="MAIN_CLASS_NAME" value="org.example.FourOfAKindTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FourOfAKindTest.isGetScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RYWK6-PokerHandsKata" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.FourOfAKindTest" />
-      <option name="METHOD_NAME" value="isGetScore" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,7 +98,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StraightFlushTest.isGetScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FullHouseTest.getScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RYWK6-PokerHandsKata" />
       <extension name="coverage">
         <pattern>
@@ -127,8 +107,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.StraightFlushTest" />
-      <option name="METHOD_NAME" value="isGetScore" />
+      <option name="MAIN_CLASS_NAME" value="org.example.FullHouseTest" />
+      <option name="METHOD_NAME" value="getScore" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FullHouseTest.isMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RYWK6-PokerHandsKata" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.FullHouseTest" />
+      <option name="METHOD_NAME" value="isMatch" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -152,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FullHouseTest.isMatch" />
+        <item itemvalue="JUnit.FullHouseTest.getScore" />
         <item itemvalue="JUnit.FourOfAKindTest" />
         <item itemvalue="JUnit.FourOfAKindTest.isMatch" />
         <item itemvalue="JUnit.StraightFlushTest.isMatchCheck" />
-        <item itemvalue="JUnit.FourOfAKindTest.isGetScore" />
-        <item itemvalue="JUnit.StraightFlushTest.isGetScore" />
       </list>
     </recent_temporary>
   </component>
