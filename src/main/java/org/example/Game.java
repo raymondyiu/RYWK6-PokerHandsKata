@@ -106,7 +106,7 @@ public class Game {
             }
         }
         Straight straight = new Straight();
-        winnerMsg = straight.whoWin(cards1, cards2,"with flush: ");
+        winnerMsg = straight.whoWin(cards1, cards2,"with straight: ");
         switch (winnerMsg.getWinner()){
             case Player1Win -> {
                 return(player1Name + " wins. - " + winnerMsg.getMessage());
