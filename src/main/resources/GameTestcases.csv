@@ -9,3 +9,6 @@ Black wins. - with full house: King over Ace,Black: AH KS KC AD KH White: 2S 8S 
 White wins. - with flush: Spade,Black: AH 2H 6H 8H TH White: 2S 8S AS QS 3S
 Tie.,Black: AH 4H 6H 7H KH White: AH 4H 6H 7H KH
 Black wins. - with flush: Heart,Black: AH 2H 6H 8H TH White: 2S 8S AS QS 3H
+Black wins. - with Straight:,Black: 6H 7H 8H 9H TS White: 7C 5S 3S 6S 4H
+White wins. - with Straight:,Black: 6H 7H 8H 9H TS White: KC QS TS JH AC
+Tie.,Black: JS 9H TH 8H 7H White: 7H 8H 9H TH JH
