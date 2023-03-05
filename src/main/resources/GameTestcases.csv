@@ -16,3 +16,8 @@ White wins. - with three of a kind: 10,Black: AH 7S 7C 2D 7H White: TS 3C TH JH 
 Black wins. - with three of a kind: King,Black: 3H KS KC TD KH White: 9H 9S 9C QS 3H
 White wins. - with three of a kind: Jack,Black: AH 7S 7C 2D 6H White: JS 3C 5H JH JC
 Black wins. - with three of a kind: King,Black: 3H KS KC TD KH White: AH AS TC QS 3H
+White wins. - with two pairs: Jack and 10,Black: JH JS 8C 8D 4H White: TS JC AH JH TC
+Black wins. - with two pairs: Ace and King,Black: AH KS KC AD 9H White: TS JC AH JH TC
+Tie.,Black: JS 9H JH 9C 2C White: JC JD 9S 9D 2H
+White wins. - with two pairs: 10 and 2,Black: JH TS 8C 8D 4H White: TS 2C AH 2H TC
+Black wins. - with two pairs: King and 5,Black: 5H KS KC 5D 9H White: TS 2C AH JH TC
