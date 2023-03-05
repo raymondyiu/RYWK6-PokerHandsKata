@@ -31,7 +31,6 @@ public class Pair implements IMatch{
 
             match = cardList.contains(targetStr1);
             if (match) {break;}
-
         }
         return match;
     }
