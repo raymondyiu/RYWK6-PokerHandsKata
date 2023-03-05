@@ -48,8 +48,12 @@ public class FourOfAKind implements IMatch, IWinner{
             winnerMsg = higherScore(player1Cards, player2Cards,winnerMsg);
         } else if (match1){
             winnerMsg.setWinner(WinEnum.Player1Win);
+            CardValue cardValue1 = findKeyScore(player1Cards);
+            winnerMsg.setMessage(winnerMsg.getMessage()+cardValue1.value());
         } else if (match2){
             winnerMsg.setWinner(WinEnum.Player2Win);
+            CardValue cardValue2 = findKeyScore(player2Cards);
+            winnerMsg.setMessage(winnerMsg.getMessage()+cardValue2.value());
         } else {
             winnerMsg.setWinner(WinEnum.NotMatch);
             winnerMsg.setMessage("NotMatch");

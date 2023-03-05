@@ -119,7 +119,20 @@ public class Game {
             }
         }
         ThreeOfAKind threeOfAKind = new ThreeOfAKind();
-        winnerMsg = straight.whoWin(cards1, cards2,"with three of a kind: ");
+        winnerMsg = threeOfAKind.whoWin(cards1, cards2,"with three of a kind: ");
+        switch (winnerMsg.getWinner()){
+            case Player1Win -> {
+                return(player1Name + " wins. - " + winnerMsg.getMessage());
+            }
+            case Player2Win -> {
+                return(player2Name + " wins. - " + winnerMsg.getMessage());
+            }
+            case Tie -> {
+                return(winnerMsg.getMessage());
+            }
+        }
+        TwoPairs twoPairs = new TwoPairs();
+        winnerMsg = twoPairs.whoWin(cards1, cards2,"with three of a kind: ");
         switch (winnerMsg.getWinner()){
             case Player1Win -> {
                 return(player1Name + " wins. - " + winnerMsg.getMessage());
