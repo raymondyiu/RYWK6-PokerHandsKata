@@ -56,16 +56,20 @@ public class Game {
         StraightFlush straightFlush = new StraightFlush();
         WinnerMsg winnerMsg = straightFlush.whoWin(cards1, cards2);
         switch (winnerMsg.getWinner()){
-            case Player1 -> {
+            case Player1Win -> {
                 return(player1Name + " wins. - " + winnerMsg.getMessage());
             }
-            case Player2 -> {
+            case Player2Win -> {
                 return(player2Name + " wins. - " + winnerMsg.getMessage());
             }
             case Tie -> {
                 return(winnerMsg.getMessage());
             }
         }
+        FourOfAKind fourOfAKind = new FourOfAKind();
+        winnerMsg = fourOfAKind.whoWin(cards1, cards2);
+
         return ("No result");
     }
+
 }

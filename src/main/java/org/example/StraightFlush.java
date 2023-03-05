@@ -9,6 +9,7 @@ public class StraightFlush implements IMatch {
 
     private Map<String, String> target;
     private Rank rank = Rank.StraightFlush;
+    private int HIGHEST_SCORE_CARD_INDEX=4;
 
     StraightFlush(){
         target = new HashMap<>();
@@ -56,27 +57,31 @@ public class StraightFlush implements IMatch {
         winnerMsg.setMessage("with straight flush");
 
         if (match1 && match2) {
-            int score1 = player1Cards.get(4).getCardValue().score();
-            int score2 = player2Cards.get(4).getCardValue().score();
-            if ( score1 == score2){
-                winnerMsg.setWinner(WinEnum.Tie);
-                winnerMsg.setMessage("Tie.");
-            } else if (score1 > score2){
-                winnerMsg.setWinner(WinEnum.Player1);
-            } else {
-                winnerMsg.setWinner(WinEnum.Player2);
-            }
-
+            winnerMsg = higherScore(player1Cards,player2Cards,winnerMsg);
         } else if (match1){
-            winnerMsg.setWinner(WinEnum.Player1);
+            winnerMsg.setWinner(WinEnum.Player1Win);
         } else if (match2){
-            winnerMsg.setWinner(WinEnum.Player2);
+            winnerMsg.setWinner(WinEnum.Player2Win);
         } else {
                 winnerMsg.setWinner(WinEnum.NotMatch);
                 winnerMsg.setMessage("NotMatch");
         }
 
         return winnerMsg;
+    }
+    private WinnerMsg higherScore(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, WinnerMsg winnerMsg){
+
+        int score1 = player1Cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue().score();
+        int score2 = player2Cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue().score();
+        if ( score1 == score2){
+            winnerMsg.setWinner(WinEnum.Tie);
+            winnerMsg.setMessage("Tie.");
+        } else if (score1 > score2){
+            winnerMsg.setWinner(WinEnum.Player1Win);
+        } else {
+            winnerMsg.setWinner(WinEnum.Player2Win);
+        }
+        return(winnerMsg);
     }
 
 }

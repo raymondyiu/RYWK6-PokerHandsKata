@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5336e213-0724-415a-b0c5-aa9299767fac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/GameTestcases.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FourOfAKind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FourOfAKind.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/IMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/IMatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StraightFlush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StraightFlush.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/WinEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/WinEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/GameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +21,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -101,22 +101,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PairTest.getScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RYWK6-PokerHandsKata" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
-      <option name="MAIN_CLASS_NAME" value="org.example.PairTest" />
-      <option name="METHOD_NAME" value="getScore" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PairTest.isMatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RYWK6-PokerHandsKata" />
       <extension name="coverage">
@@ -129,6 +113,21 @@
       <option name="MAIN_CLASS_NAME" value="org.example.PairTest" />
       <option name="METHOD_NAME" value="isMatch" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StraightFlushTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RYWK6-PokerHandsKata" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.StraightFlushTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -152,10 +151,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.GameTest.winnerCheck" />
-        <item itemvalue="JUnit.GameTest" />
         <item itemvalue="JUnit.StraightFlushTest.isMatchCheck" />
+        <item itemvalue="JUnit.StraightFlushTest" />
+        <item itemvalue="JUnit.GameTest" />
         <item itemvalue="JUnit.PairTest.isMatch" />
-        <item itemvalue="JUnit.PairTest.getScore" />
       </list>
     </recent_temporary>
   </component>
