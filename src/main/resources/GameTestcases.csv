@@ -12,3 +12,7 @@ Black wins. - with flush: Heart,Black: AH 2H 6H 8H TH White: 2S 8S AS QS 3H
 Black wins. - with straight: 10,Black: 6H 7H 8H 9H TS White: 7C 5S 3S 6S 4H
 White wins. - with straight: Ace,Black: 6H 7H 8H 9H TS White: KC QS TS JH AC
 Tie.,Black: JS 9H TH 8C 7C White: 7H 8S 9H TS JH
+White wins. - with three of a kind: 10,Black: AH 7S 7C 2D 7H White: TS 3C TH JH TC
+Black wins. - with three of a kind: King,Black: 3H KS KC TD KH White: 9H 9S 9C QS 3H
+White wins. - with three of a kind: Jack,Black: AH 7S 7C 2D 6H White: JS 3C 5H JH JC
+Black wins. - with three of a kind: King,Black: 3H KS KC TD KH White: AH AS AC QS 3H
