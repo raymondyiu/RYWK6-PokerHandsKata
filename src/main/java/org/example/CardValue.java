@@ -20,7 +20,7 @@ public enum CardValue {
         this.label = label;
         this.score = score;
     }
-    public String value() {return value}
+    public String value() {return value;}
     public String label() { return label;}
     public int score() {return score;}
     private static final Map<String, CardValue> BY_LABEL = new HashMap<>();

@@ -61,11 +61,11 @@ public class StraightFlush implements IMatch {
         } else if (match1){
             winnerMsg.setWinner(WinEnum.Player1Win);
             winnerMsg.setMessage(winnerMsg.getMessage()+
-                    player1Cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue().name());
+                    player1Cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue().value());
         } else if (match2){
             winnerMsg.setWinner(WinEnum.Player2Win);
             winnerMsg.setMessage(winnerMsg.getMessage()+
-                    player2Cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue().name());
+                    player2Cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue().value());
         } else {
                 winnerMsg.setWinner(WinEnum.NotMatch);
                 winnerMsg.setMessage("NotMatch");
@@ -83,11 +83,11 @@ public class StraightFlush implements IMatch {
         } else if (score1 > score2){
             winnerMsg.setWinner(WinEnum.Player1Win);
             winnerMsg.setMessage(winnerMsg.getMessage()+
-                    player1Cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue().name());
+                    player1Cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue().value());
         } else {
             winnerMsg.setWinner(WinEnum.Player2Win);
             winnerMsg.setMessage(winnerMsg.getMessage()+
-                    player2Cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue().name());
+                    player2Cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue().value());
         }
         return(winnerMsg);
     }

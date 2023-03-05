@@ -68,7 +68,17 @@ public class Game {
         }
         FourOfAKind fourOfAKind = new FourOfAKind();
         winnerMsg = fourOfAKind.whoWin(cards1, cards2);
-
+        switch (winnerMsg.getWinner()){
+            case Player1Win -> {
+                return(player1Name + " wins. - " + winnerMsg.getMessage());
+            }
+            case Player2Win -> {
+                return(player2Name + " wins. - " + winnerMsg.getMessage());
+            }
+            case Tie -> {
+                return(winnerMsg.getMessage());
+            }
+        }
         return ("No result");
     }
 

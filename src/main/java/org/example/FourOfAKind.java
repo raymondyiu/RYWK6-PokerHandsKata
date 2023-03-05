@@ -58,22 +58,25 @@ public class FourOfAKind implements IMatch{
         return winnerMsg;
     }
     private WinnerMsg higherScore(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, WinnerMsg winnerMsg){
-        int score1 = findKeyScore(player1Cards);
-        int score2 = findKeyScore(player2Cards);
-        if ( score1 == score2){
+        CardValue cardValue1 = findKeyScore(player1Cards);
+        CardValue cardValue2 = findKeyScore(player2Cards);
+
+        if ( cardValue1.score() == cardValue2.score()){
             winnerMsg.setWinner(WinEnum.Tie);
             winnerMsg.setMessage("Tie.");
-        } else if (score1 > score2){
+        } else if (cardValue1.score() > cardValue2.score()){
             winnerMsg.setWinner(WinEnum.Player1Win);
+            winnerMsg.setMessage(winnerMsg.getMessage() + cardValue1.value());
         } else {
             winnerMsg.setWinner(WinEnum.Player2Win);
+            winnerMsg.setMessage(winnerMsg.getMessage() + cardValue2.value());
         }
         return(winnerMsg);
     }
 
-    private int findKeyScore(ArrayList<Card> cards){
+    private CardValue findKeyScore(ArrayList<Card> cards){
         String cardList="";
-        int score=0;
+        CardValue retCardValue=null;
 
         for (Card card : cards){
             cardList += card.getCardValue().label();
@@ -81,9 +84,10 @@ public class FourOfAKind implements IMatch{
         for (CardValue cardValue : CardValue.values()){
             String targetStr = target.get(cardValue.label());
             if (cardList.contains(targetStr)) {
-                score = cardValue.score();
+                retCardValue = cardValue;
+                break;
             }
-        }
-        return score;
+        };
+        return(retCardValue);
     }
 }
