@@ -18,11 +18,15 @@ public class Game {
     private ArrayList<Card> cards2;
 
     Game(String line){
+        cards1 = new ArrayList<>();
+        cards2 = new ArrayList<>();
 
         String[] items = line.split(" ");
-        player1Name = items[PLAYER1_INDEX];
-        player2Name = items[PLAYER2_INDEX];
+        player1Name = items[PLAYER1_INDEX].substring(0,items[PLAYER1_INDEX].length()-1);
+        player2Name = items[PLAYER2_INDEX].substring(0,items[PLAYER2_INDEX].length()-1);
+
         for (int i=POKERHAND1_START_INDEX; i<=POKERHAND1_END_INDEX; i++){
+
             Card card = new Card(items[i]);
             cards1.add(card);
         }
@@ -48,19 +52,20 @@ public class Game {
 
     }
 
-    public void winnerCheck(){
+    public String winnerCheck(){
         StraightFlush straightFlush = new StraightFlush();
         WinnerMsg winnerMsg = straightFlush.whoWin(cards1, cards2);
         switch (winnerMsg.getWinner()){
             case Player1 -> {
-                System.out.println(player1Name + winnerMsg.getMessage());
-                return;
+                return(player1Name + " wins. - " + winnerMsg.getMessage());
             }
             case Player2 -> {
-                System.out.println(player2Name + winnerMsg.getMessage());
-                return;
+                return(player2Name + " wins. - " + winnerMsg.getMessage());
+            }
+            case Tie -> {
+                return(winnerMsg.getMessage());
             }
         }
-
+        return ("No result");
     }
 }
