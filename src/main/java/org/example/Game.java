@@ -80,7 +80,7 @@ public class Game {
             }
         }
         FullHouse fullHouse = new FullHouse();
-        winnerMsg = fullHouse.whoWin(cards1,cards2,"- with full house: ");
+        winnerMsg = fullHouse.whoWin(cards1,cards2,"with full house: ");
         switch (winnerMsg.getWinner()){
             case Player1Win -> {
                 return(player1Name + " wins. - " + winnerMsg.getMessage());
