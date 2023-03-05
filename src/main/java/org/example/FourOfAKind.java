@@ -38,11 +38,11 @@ public class FourOfAKind implements IMatch{
         }
         return match;
     }
-    public WinnerMsg whoWin(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards){
+    public WinnerMsg whoWin(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, String message){
         boolean match1 = isMatch(player1Cards);
         boolean match2 = isMatch(player2Cards);
         WinnerMsg winnerMsg = new WinnerMsg();
-        winnerMsg.setMessage("with four of a kind: ");
+        winnerMsg.setMessage(message);
 
         if (match1 && match2) {
             winnerMsg = higherScore(player1Cards, player2Cards,winnerMsg);
@@ -57,7 +57,7 @@ public class FourOfAKind implements IMatch{
 
         return winnerMsg;
     }
-    private WinnerMsg higherScore(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, WinnerMsg winnerMsg){
+    public WinnerMsg higherScore(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, WinnerMsg winnerMsg){
         CardValue cardValue1 = findKeyScore(player1Cards);
         CardValue cardValue2 = findKeyScore(player2Cards);
 
@@ -74,7 +74,7 @@ public class FourOfAKind implements IMatch{
         return(winnerMsg);
     }
 
-    private CardValue findKeyScore(ArrayList<Card> cards){
+    public CardValue findKeyScore(ArrayList<Card> cards){
         String cardList="";
         CardValue retCardValue=null;
 

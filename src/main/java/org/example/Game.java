@@ -54,7 +54,7 @@ public class Game {
 
     public String winnerCheck(){
         StraightFlush straightFlush = new StraightFlush();
-        WinnerMsg winnerMsg = straightFlush.whoWin(cards1, cards2);
+        WinnerMsg winnerMsg = straightFlush.whoWin(cards1, cards2, "with straight flush: ");
         switch (winnerMsg.getWinner()){
             case Player1Win -> {
                 return(player1Name + " wins. - " + winnerMsg.getMessage());
@@ -67,7 +67,20 @@ public class Game {
             }
         }
         FourOfAKind fourOfAKind = new FourOfAKind();
-        winnerMsg = fourOfAKind.whoWin(cards1, cards2);
+        winnerMsg = fourOfAKind.whoWin(cards1, cards2,"with four of a kind: ");
+        switch (winnerMsg.getWinner()){
+            case Player1Win -> {
+                return(player1Name + " wins. - " + winnerMsg.getMessage());
+            }
+            case Player2Win -> {
+                return(player2Name + " wins. - " + winnerMsg.getMessage());
+            }
+            case Tie -> {
+                return(winnerMsg.getMessage());
+            }
+        }
+        FullHouse fullHouse = new FullHouse();
+        winnerMsg = fullHouse.whoWin(cards1,cards2,"- with full house: ");
         switch (winnerMsg.getWinner()){
             case Player1Win -> {
                 return(player1Name + " wins. - " + winnerMsg.getMessage());

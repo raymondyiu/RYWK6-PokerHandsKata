@@ -55,4 +55,26 @@ public class FullHouse implements IMatch{
         return match;
     }
 
+    public WinnerMsg whoWin(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards,String message){
+        boolean match1 = isMatch(player1Cards);
+        boolean match2 = isMatch(player2Cards);
+        WinnerMsg winnerMsg = new WinnerMsg();
+        winnerMsg.setMessage(message);
+
+        if (match1 && match2) {
+            winnerMsg = higherScore(player1Cards, player2Cards,winnerMsg);
+        } else if (match1){
+            winnerMsg.setWinner(WinEnum.Player1Win);
+        } else if (match2){
+            winnerMsg.setWinner(WinEnum.Player2Win);
+        } else {
+            winnerMsg.setWinner(WinEnum.NotMatch);
+            winnerMsg.setMessage("NotMatch");
+        }
+
+        return winnerMsg;
+    }
+    public WinnerMsg higherScore(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, WinnerMsg winnerMsg){
+        return (winnerMsg);
+    }
 }

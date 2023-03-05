@@ -4,3 +4,6 @@ Tie.,Black: 7H 6H 5H 4H 3H White: 3H 5H 4H 6H 7H
 White wins. - with straight flush: 7,Black: 5C 5S 5D 5H AH White: 7S 4S 3S 6S 5S
 White wins. - with four of a kind: 6,Black: 5C 5S 5D 5H AH White: 6H 6S 7S 6D 6C
 Black wins. - with four of a kind: Queen,Black: QC QS QD QH AH White: TH TS 7S TD TC
+White wins. - with full house: 10 over Jack,Black: 2H 4S 4C 2D 4H White: TS JC TH JH TC
+Black wins. - with full house: K over A,Black: AH KS KC AD KH  White: 2S 8S AS QS 3S
+White wins. - with full house: 10 over 7,Black: KH 2S 3C 2D 4H  White: TS 7C TH 7H TC
