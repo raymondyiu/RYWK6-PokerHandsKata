@@ -54,14 +54,18 @@ public class StraightFlush implements IMatch {
         boolean match1 = isMatch(player1Cards);
         boolean match2 = isMatch(player2Cards);
         WinnerMsg winnerMsg = new WinnerMsg();
-        winnerMsg.setMessage("with straight flush");
+        winnerMsg.setMessage("with straight flush: ");
 
         if (match1 && match2) {
             winnerMsg = higherScore(player1Cards,player2Cards,winnerMsg);
         } else if (match1){
             winnerMsg.setWinner(WinEnum.Player1Win);
+            winnerMsg.setMessage(winnerMsg.getMessage()+
+                    player1Cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue().name());
         } else if (match2){
             winnerMsg.setWinner(WinEnum.Player2Win);
+            winnerMsg.setMessage(winnerMsg.getMessage()+
+                    player2Cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue().name());
         } else {
                 winnerMsg.setWinner(WinEnum.NotMatch);
                 winnerMsg.setMessage("NotMatch");
@@ -78,8 +82,12 @@ public class StraightFlush implements IMatch {
             winnerMsg.setMessage("Tie.");
         } else if (score1 > score2){
             winnerMsg.setWinner(WinEnum.Player1Win);
+            winnerMsg.setMessage(winnerMsg.getMessage()+
+                    player1Cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue().name());
         } else {
             winnerMsg.setWinner(WinEnum.Player2Win);
+            winnerMsg.setMessage(winnerMsg.getMessage()+
+                    player2Cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue().name());
         }
         return(winnerMsg);
     }

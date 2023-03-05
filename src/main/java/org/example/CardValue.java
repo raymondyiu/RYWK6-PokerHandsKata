@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum CardValue {
-    Two("2",2), Three("3",3), Four("4", 4), Five("5", 5), Six("6",6),
-    Seven("7", 7), Eight("8",8 ), Nine("9", 9), Ten("T",10),
+    2("2",2), 3("3",3), 4("4", 4), 5("5", 5), 6("6",6),
+    7("7", 7), 8("8",8 ), 9("9", 9), 10("T",10),
     Jack("J",11), Queen("Q", 12), King("K",13), Ace("A",14);
 
 

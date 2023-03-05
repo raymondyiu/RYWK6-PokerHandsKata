@@ -1,5 +1,6 @@
-White wins. - with straight flush,Black: 2S 4S 3S 6S 5S White: TH AH JH KH QH
-Black wins. - with straight flush,Black: 2S 4S 3S 6S 5S White: 3H AH JH KH QH
+White wins. - with straight flush: Ace,Black: 2S 4S 3S 6S 5S White: TH AH JH KH QH
+Black wins. - with straight flush: 6,Black: 2S 4S 3S 6S 5S White: 3H AH JH KH QH
 Tie.,Black: 7H 6H 5H 4H 3H White: 3H 5H 4H 6H 7H
-White wins. - with four of a kind,Black: 5C 5S 5D 5H AH White: 6H 6S 7S 6D 6C
-Black wins. - with four of a kind,Black: QC QS QD QH AH White: TH TS 7S TD TC
+White wins. - with straight flush: 7,Black: 5C 5S 5D 5H AH White: 7S 4S 3S 6S 5S
+White wins. - with four of a kind: 6,Black: 5C 5S 5D 5H AH White: 6H 6S 7S 6D 6C
+Black wins. - with four of a kind Q,Black: QC QS QD QH AH White: TH TS 7S TD TC

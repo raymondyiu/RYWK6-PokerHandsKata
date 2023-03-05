@@ -84,5 +84,6 @@ public class FourOfAKind implements IMatch{
                 score = cardValue.score();
             }
         }
+        return score;
     }
 }
