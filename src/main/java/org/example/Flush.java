@@ -7,6 +7,7 @@ import java.util.Map;
 public class Flush implements IMatch, IWinner{
     private Map<String, String> target;
     private Rank rank = Rank.Flush;
+
     private int HIGHEST_SCORE_CARD_INDEX=4;
 
     Flush(){
@@ -51,12 +52,10 @@ public class Flush implements IMatch, IWinner{
             winnerMsg = higherScore(player1Cards,player2Cards,winnerMsg);
         } else if (match1){
             winnerMsg.setWinner(WinEnum.Player1Win);
-            CardValue cardValue = findKeyScore(player1Cards);
-            winnerMsg.setMessage(winnerMsg.getMessage()+cardValue.value());
+            winnerMsg.setMessage(winnerMsg.getMessage()+player1Cards.get(HIGHEST_SCORE_CARD_INDEX).getSuit().name());
         } else if (match2){
             winnerMsg.setWinner(WinEnum.Player2Win);
-            CardValue cardValue = findKeyScore(player2Cards);
-            winnerMsg.setMessage(winnerMsg.getMessage()+cardValue.value());
+            winnerMsg.setMessage(winnerMsg.getMessage()+player2Cards.get(HIGHEST_SCORE_CARD_INDEX).getSuit().name());
         } else {
             winnerMsg.setWinner(WinEnum.NotMatch);
             winnerMsg.setMessage("NotMatch");
@@ -66,25 +65,41 @@ public class Flush implements IMatch, IWinner{
     }
     public WinnerMsg higherScore(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, WinnerMsg winnerMsg){
 
-        CardValue cardValue1 = findKeyScore(player1Cards);
-        CardValue cardValue2 = findKeyScore(player2Cards);
-        if ( cardValue1.score() == cardValue2.score()){
+        Card card1 = null;
+        Card card2 = null;
+        int score1=0;
+        int score2=0;
+
+        for (int i=HIGHEST_SCORE_CARD_INDEX; i>=0;i--){
+            card1 = player1Cards.get(i);
+            card2 = player2Cards.get(i);
+            score1 = card1.getCardValue().score();
+            score2 = card2.getCardValue().score();
+
+            if ( score1 == score2){
+                continue;
+            } else {
+                break;
+            }
+        }
+
+        if ( score1 == score2){
             winnerMsg.setWinner(WinEnum.Tie);
             winnerMsg.setMessage("Tie.");
-        } else if (cardValue1.score() > cardValue2.score()){
+        } else if (score1 > score2){
             winnerMsg.setWinner(WinEnum.Player1Win);
             winnerMsg.setMessage(winnerMsg.getMessage()+
-                    cardValue1.value());
+                    card1.getSuit().name());
         } else {
             winnerMsg.setWinner(WinEnum.Player2Win);
             winnerMsg.setMessage(winnerMsg.getMessage()+
-                    cardValue2.value());
+                    card2.getSuit().name());
         }
         return(winnerMsg);
     }
 
     public CardValue findKeyScore(ArrayList<Card> cards){
-        return(cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue());
+        return(null);
     }
 
 }
