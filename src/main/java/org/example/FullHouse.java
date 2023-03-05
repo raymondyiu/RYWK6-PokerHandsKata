@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FullHouse implements IMatch{
+public class FullHouse implements IMatch, IWinner{
     private Map<String, String> targetThreeOfAKind;
 
     private Map<String, String> targetPair;
@@ -65,12 +65,12 @@ public class FullHouse implements IMatch{
             winnerMsg = higherScore(player1Cards, player2Cards,winnerMsg);
         } else if (match1){
             winnerMsg.setWinner(WinEnum.Player1Win);
-            CardValue threeOfAKindCardValue = keyScore(player1Cards);
+            CardValue threeOfAKindCardValue = findKeyScore(player1Cards);
             CardValue pairCardValue = findPair(player1Cards);
             winnerMsg.setMessage(winnerMsg.getMessage() + threeOfAKindCardValue.value() + " over "+ pairCardValue.value());
         } else if (match2){
             winnerMsg.setWinner(WinEnum.Player2Win);
-            CardValue threeOfAKindCardValue = keyScore(player2Cards);
+            CardValue threeOfAKindCardValue = findKeyScore(player2Cards);
             CardValue pairCardValue = findPair(player2Cards);
             winnerMsg.setMessage(winnerMsg.getMessage() + threeOfAKindCardValue.value() + " over "+ pairCardValue.value());
         } else {
@@ -81,8 +81,8 @@ public class FullHouse implements IMatch{
         return winnerMsg;
     }
     public WinnerMsg higherScore(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, WinnerMsg winnerMsg){
-        CardValue cardValue1 = keyScore(player1Cards);
-        CardValue cardValue2 = keyScore(player2Cards);
+        CardValue cardValue1 = findKeyScore(player1Cards);
+        CardValue cardValue2 = findKeyScore(player2Cards);
         if ( cardValue1.score() == cardValue2.score()){
             winnerMsg.setWinner(WinEnum.Tie);
             winnerMsg.setMessage("Tie.");
@@ -97,7 +97,7 @@ public class FullHouse implements IMatch{
         }
         return (winnerMsg);
     }
-    public CardValue keyScore(ArrayList<Card> cards){
+    public CardValue findKeyScore(ArrayList<Card> cards){
         String cardList="";
         CardValue retCardValue=null;
 

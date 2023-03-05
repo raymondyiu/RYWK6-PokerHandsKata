@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FourOfAKind implements IMatch{
+public class FourOfAKind implements IMatch, IWinner{
     private Map<String, String> target;
     private Rank rank = Rank.FourOfAKind;
 

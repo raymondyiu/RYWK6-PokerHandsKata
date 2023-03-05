@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5336e213-0724-415a-b0c5-aa9299767fac" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Flush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Flush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FourOfAKind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FourOfAKind.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/FullHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/FullHouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/IWinner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/IWinner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/StraightFlush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/StraightFlush.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/GameTestcases.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GameTestcases.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,9 +152,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.GameTest.winnerCheck" />
+        <item itemvalue="JUnit.GameTest" />
         <item itemvalue="JUnit.StraightFlushTest.isMatchCheck" />
         <item itemvalue="JUnit.StraightFlushTest" />
-        <item itemvalue="JUnit.GameTest" />
         <item itemvalue="JUnit.PairTest.isMatch" />
       </list>
     </recent_temporary>

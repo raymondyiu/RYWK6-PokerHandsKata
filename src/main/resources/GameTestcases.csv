@@ -6,3 +6,6 @@ White wins. - with four of a kind: 6,Black: 5C 5S 5D 5H AH White: 6H 6S 7S 6D 6C
 Black wins. - with four of a kind: Queen,Black: QC QS QD QH AH White: TH TS 7S TD TC
 White wins. - with full house: 10 over Jack,Black: 2H 4S 4C 2D 4H White: TS JC TH JH TC
 Black wins. - with full house: King over Ace,Black: AH KS KC AD KH White: 2S 8S AS QS 3S
+White wins. - with Flush: Spade,Black: AH 2H 6H 8H TH White: 2S 8S AS QS 3S
+Tie.,Black: AH 4H 6H 7H KH White: AH 4H 6H 7H KH
+Black wins. - with Flush: Heart,Black: AH 2H 6H 8H TH White: 2S 8S AS QS 3H
