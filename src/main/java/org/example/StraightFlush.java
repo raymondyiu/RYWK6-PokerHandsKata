@@ -31,7 +31,7 @@ public class StraightFlush implements IMatch {
         String cardList="";
         ArrayList<String> cardSymbolList = new ArrayList<>();
         boolean match=false;
-        cards = Card.sort(cards);
+
         for (Card card : cards){
             cardSymbolList.add(card.getSymbol());
         }
@@ -48,6 +48,22 @@ public class StraightFlush implements IMatch {
             if (match) {break;}
         }
         return match;
+    }
+    public int whoWin(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards){
+        boolean match1 = isMatch(player1Cards);
+        boolean match2 = isMatch(player2Cards);
+
+        if (match1 && match2) {
+
+        } else if (match1){
+
+        } else if (match2){
+
+        } else {
+
+        }
+
+        return 0;
     }
 
 }

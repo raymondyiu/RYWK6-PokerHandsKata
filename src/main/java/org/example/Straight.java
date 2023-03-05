@@ -23,7 +23,7 @@ public class Straight implements IMatch{
         String cardList="";
         ArrayList<String> cardSymbolList = new ArrayList<>();
         boolean match=false;
-        cards = Card.sort(cards);
+
         for (Card card : cards){
             cardList += card.getCardValue().label();
         }

@@ -9,6 +9,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -40,7 +42,13 @@ class StraightFlushTest {
                 card = new Card(cardStr);
                 cards.add(card);
             }
+            Collections.sort(cards, new Comparator<Card>() {
+                        public int compare(final Card lhs, Card rhs) {
+                            return (lhs.getCardValue().score() - rhs.getCardValue().score());
+                        }
 
+                    }
+            );
             if (expectedResult) {
                 assertTrue(straightFlush.isMatch(cards));
             } else {

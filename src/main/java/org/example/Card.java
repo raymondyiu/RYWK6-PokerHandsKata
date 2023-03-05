@@ -34,13 +34,5 @@ public class Card {
         symbol = cardStr;
     }
 
-    public static ArrayList<Card> sort (ArrayList<Card> cards){
-        Card tmp;
-
-
-
-        return cards;
-    }
-
 
 }
