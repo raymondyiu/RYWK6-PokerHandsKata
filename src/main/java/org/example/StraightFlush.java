@@ -49,21 +49,33 @@ public class StraightFlush implements IMatch {
         }
         return match;
     }
-    public int whoWin(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards){
+    public WinnerMsg whoWin(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards){
         boolean match1 = isMatch(player1Cards);
         boolean match2 = isMatch(player2Cards);
+        WinnerMsg winnerMsg = new WinnerMsg();
+        winnerMsg.setMessage("with straight flush")
 
         if (match1 && match2) {
+            int score1 = player1Cards[4].getCardValue().score();
+            int score2 = player2Cards[4].getCardValue().score();
+            if ( score1 == score2){
+                winnerMsg.setMessage("Tie.");
+            } else if (score1 > score2){
+                winnerMsg.setWinner(WinEnum.Player1);
+            } else {
+                winnerMsg.setWinner(WinEnum.Player2);
+            }
 
         } else if (match1){
-
+            winnerMsg.setWinner(WinEnum.Player1);
         } else if (match2){
-
+            winnerMsg.setWinner(WinEnum.Player2);
         } else {
-
+                winnerMsg.setWinner(WinEnum.NotMatch);
+                winnerMsg.setMessage("NotMatch")
         }
 
-        return 0;
+        return winnerMsg;
     }
 
 }

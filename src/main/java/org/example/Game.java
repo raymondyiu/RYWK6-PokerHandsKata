@@ -50,13 +50,14 @@ public class Game {
 
     public void winnerCheck(){
         StraightFlush straightFlush = new StraightFlush();
-        switch (straightFlush.whoWin()){
-            case 1 -> {
-                System.out.println(player1Name + "wins. - with Straight Flush");
+        WinnerMsg winnerMsg = straightFlush.whoWin(cards1, cards2);
+        switch (winnerMsg.getWinner()){
+            case Player1 -> {
+                System.out.println(player1Name + winnerMsg.getMessage());
                 return;
             }
-            case 2 -> {
-                System.out.println(player2Name + "wins. - with Straight Flush");
+            case Player2 -> {
+                System.out.println(player2Name + winnerMsg.getMessage());
                 return;
             }
         }
