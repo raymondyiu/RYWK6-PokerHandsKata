@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TwoPairs implements IMatch{
+public class TwoPairs implements IMatch, IWinner {
     private Map<String, String> target;
     private Rank rank = Rank.TwoPairs;
 
@@ -124,10 +124,6 @@ public class TwoPairs implements IMatch{
         return(winnerMsg);
     }
 
-    public CardValue findKeyScore(ArrayList<Card> cards){
-        CardValue retCardValue=null;
-        return(retCardValue);
-    }
     private ArrayList<Card> findTwoPairs(ArrayList<Card> cards){
         String cardList="";
         Map<String,String> targetCopy = new HashMap<>();
