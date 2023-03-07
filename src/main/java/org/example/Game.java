@@ -132,7 +132,7 @@ public class Game {
             }
         }
         TwoPairs twoPairs = new TwoPairs();
-        winnerMsg = twoPairs.whoWin(cards1, cards2,"with three of a kind: ");
+        winnerMsg = twoPairs.whoWin(cards1, cards2,"with two pairs: ");
         switch (winnerMsg.getWinner()){
             case Player1Win -> {
                 return(player1Name + " wins. - " + winnerMsg.getMessage());
