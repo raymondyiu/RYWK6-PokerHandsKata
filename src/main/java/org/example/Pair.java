@@ -8,8 +8,7 @@ public class Pair implements IMatch, IWinner{
     private Map<String, String> target;
     private Rank rank = Rank.Pair;
 
-    int FIRST_PAIR_INDEX = 0;
-    int SECOND_PAIR_INDEX =1;
+    int MAX_SINGLE_CARD_INDEX =2;
 
     Pair(){
         target = new HashMap<>();
@@ -47,16 +46,14 @@ public class Pair implements IMatch, IWinner{
             winnerMsg = higherScore(player1Cards, player2Cards,winnerMsg);
         } else if (match1){
             winnerMsg.setWinner(WinEnum.Player1Win);
-            ArrayList<Card> twoPairsCards1 = findTwoPairs(player1Cards);
+            Card pairCard1 = findPair(player1Cards);
             winnerMsg.setMessage(winnerMsg.getMessage()+
-                    twoPairsCards1.get(SECOND_PAIR_INDEX).getCardValue().value() + " and " +
-                    twoPairsCards1.get(FIRST_PAIR_INDEX).getCardValue().value());
+                    pairCard1.getCardValue().value());
         } else if (match2){
             winnerMsg.setWinner(WinEnum.Player2Win);
-            ArrayList<Card> twoPairsCards2 = findTwoPairs(player2Cards);
+            Card pairCard2 = findPair(player2Cards);
             winnerMsg.setMessage(winnerMsg.getMessage()+
-                    twoPairsCards2.get(SECOND_PAIR_INDEX).getCardValue().value() + " and " +
-                    twoPairsCards2.get(FIRST_PAIR_INDEX).getCardValue().value());
+                    pairCard2.getCardValue().value());
         } else {
             winnerMsg.setWinner(WinEnum.NotMatch);
             winnerMsg.setMessage("NotMatch");
@@ -64,33 +61,33 @@ public class Pair implements IMatch, IWinner{
 
         return winnerMsg;
     }
-    public WinnerMsg higherScore(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, WinnerMsg winnerMsg){
-        ArrayList<Card> twoPairsCards1 = findTwoPairs(player1Cards);
-        ArrayList<Card> twoPairsCards2 = findTwoPairs(player2Cards);
+    private WinnerMsg higherScore(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, WinnerMsg winnerMsg){
+        Card pairCard1 = findPair(player1Cards);
+        Card pairCard2 = findPair(player2Cards);
         int score1=0;
         int score2=0;
         CardValue cardValue1=null;
         CardValue cardValue2=null;
 
-        for (int i=1;i>=0; i--) {
-            cardValue1 = twoPairsCards1.get(i).getCardValue();
-            cardValue2 = twoPairsCards2.get(i).getCardValue();
-            score1 = twoPairsCards1.get(i).getCardValue().score();
-            score2 = twoPairsCards2.get(i).getCardValue().score();
 
-            if (score1 == score2){
-                continue;
-            } else {
-                break;
-            }
-        }
+        cardValue1 = pairCard1.getCardValue();
+        cardValue2 = pairCard2.getCardValue();
+        score1 = pairCard1.getCardValue().score();
+        score2 = pairCard2.getCardValue().score();
+
 
         //Two Pairs are same then check the last card
         if(score1 == score2){
-            Card singleCard1 = findSingleCard(player1Cards, twoPairsCards1);
-            Card singleCard2 = findSingleCard(player2Cards, twoPairsCards2);;
-            score1 = singleCard1.getCardValue().score();
-            score2 = singleCard2.getCardValue().score();
+            ArrayList<Card> singleCards1 = findSingleCards(player1Cards, pairCard1);
+            ArrayList<Card> singleCards2 = findSingleCards(player2Cards, pairCard2);
+
+            for(int i=MAX_SINGLE_CARD_INDEX; i>=0; i--) {
+                score1 = singleCards1.get(i).getCardValue().score();
+                score2 = singleCards2.get(i).getCardValue().score();
+                if (score1 != score2) {
+                    break;
+                }
+            }
         }
 
         if ( score1 == score2){
@@ -99,23 +96,21 @@ public class Pair implements IMatch, IWinner{
         } else if (score1 > score2){
             winnerMsg.setWinner(WinEnum.Player1Win);
             winnerMsg.setMessage(winnerMsg.getMessage() +
-                    twoPairsCards1.get(SECOND_PAIR_INDEX).getCardValue().value() + " and " +
-                    twoPairsCards1.get(FIRST_PAIR_INDEX).getCardValue().value());
+                    pairCard1.getCardValue().value());
         } else {
             winnerMsg.setWinner(WinEnum.Player2Win);
             winnerMsg.setMessage(winnerMsg.getMessage() +
-                    twoPairsCards2.get(SECOND_PAIR_INDEX).getCardValue().value() + " and " +
-                    twoPairsCards2.get(FIRST_PAIR_INDEX).getCardValue().value());
+                    pairCard2.getCardValue().value());
         }
         return(winnerMsg);
     }
 
-    private ArrayList<Card> findTwoPairs(ArrayList<Card> cards){
+    private Card findPair(ArrayList<Card> cards){
         String cardList="";
         Map<String,String> targetCopy = new HashMap<>();
         targetCopy.putAll(target);
         boolean match=false;
-        ArrayList<Card> retCards = new ArrayList<Card>();
+        Card retCard = null;
 
         for (Card card : cards){
             cardList += card.getCardValue().label();
@@ -127,55 +122,35 @@ public class Pair implements IMatch, IWinner{
             if (cardList.contains(targetStr1)) {
                 for (Card card : cards){
                     if (card.getCardValue().label().equals(cardValue.label())){
-                        retCards.add(card);
+                        retCard = card;
                         break;
                     }
                 }
-                targetCopy.remove(cardValue.label());
-                for (CardValue cardValue1 : CardValue.values()) {
-                    String targetStr2 = targetCopy.get(cardValue1.label());
-                    if (targetStr2 != null) {
-
-                        match = cardList.contains(targetStr2);
-                        if (match) {
-                            for (Card card : cards){
-                                if (card.getCardValue().label().equals(cardValue1.label())){
-                                    retCards.add(card);
-                                    break;
-                                }
-                            }
-                            break;
-                        }
-                    }
-                }
-                if (match) {
-                    break;
-                }
+                break;
             }
         }
 
-        return (retCards);
+        return (retCard);
     }
 
-    private Card findSingleCard(ArrayList<Card> playerCards, ArrayList<Card> twoPairCards) {
+    private ArrayList<Card> findSingleCards(ArrayList<Card> playerCards, Card pairCard) {
         ArrayList<Card> playerCardsClone = new ArrayList<Card>(playerCards);
 
-        for (Card twoPairCard : twoPairCards ){
-            for(Card playerCardClone : playerCardsClone) {
-                if (playerCardClone.getCardValue().label().equals(twoPairCard.getCardValue().value())) {
-                    playerCardsClone.remove(playerCardClone);
-                    break;
-                }
-            }
-            for(Card playerCardClone : playerCardsClone) {
-                if (playerCardClone.getCardValue().label().equals(twoPairCard.getCardValue().value())) {
-                    playerCardsClone.remove(playerCardClone);
-                    break;
-                }
-            }
-        }
 
-        return(playerCardsClone.get(0));
+            for(Card playerCardClone : playerCardsClone) {
+                if (playerCardClone.getCardValue().label().equals(pairCard.getCardValue().value())) {
+                    playerCardsClone.remove(playerCardClone);
+                    break;
+                }
+            }
+            for(Card playerCardClone : playerCardsClone) {
+                if (playerCardClone.getCardValue().label().equals(pairCard.getCardValue().value())) {
+                    playerCardsClone.remove(playerCardClone);
+                    break;
+                }
+            }
+
+        return(playerCardsClone);
     }
 
 }

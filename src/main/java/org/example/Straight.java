@@ -53,7 +53,7 @@ public class Straight implements IMatch, IWinner{
 
         return winnerMsg;
     }
-    public WinnerMsg higherScore(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, WinnerMsg winnerMsg){
+    private WinnerMsg higherScore(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, WinnerMsg winnerMsg){
 
         CardValue cardValue1 = findKeyScore(player1Cards);
         CardValue cardValue2 = findKeyScore(player2Cards);
@@ -72,7 +72,7 @@ public class Straight implements IMatch, IWinner{
         return(winnerMsg);
     }
 
-    public CardValue findKeyScore(ArrayList<Card> cards){
+    private CardValue findKeyScore(ArrayList<Card> cards){
         return(cards.get(HIGHEST_SCORE_CARD_INDEX).getCardValue());
     }
 

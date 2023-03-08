@@ -97,7 +97,7 @@ public class FullHouse implements IMatch, IWinner{
         }
         return (winnerMsg);
     }
-    public CardValue findKeyScore(ArrayList<Card> cards){
+    private CardValue findKeyScore(ArrayList<Card> cards){
         String cardList="";
         CardValue retCardValue=null;
 

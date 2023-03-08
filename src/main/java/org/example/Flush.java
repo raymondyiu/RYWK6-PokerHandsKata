@@ -63,7 +63,7 @@ public class Flush implements IMatch, IWinner{
 
         return winnerMsg;
     }
-    public WinnerMsg higherScore(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, WinnerMsg winnerMsg){
+    private WinnerMsg higherScore(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, WinnerMsg winnerMsg){
 
         Card card1 = null;
         Card card2 = null;
@@ -98,8 +98,5 @@ public class Flush implements IMatch, IWinner{
         return(winnerMsg);
     }
 
-    public CardValue findKeyScore(ArrayList<Card> cards){
-        return(null);
-    }
 
 }

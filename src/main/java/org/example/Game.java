@@ -144,6 +144,19 @@ public class Game {
                 return(winnerMsg.getMessage());
             }
         }
+        Pair pair = new Pair();
+        winnerMsg = pair.whoWin(cards1, cards2,"with pair: ");
+        switch (winnerMsg.getWinner()){
+            case Player1Win -> {
+                return(player1Name + " wins. - " + winnerMsg.getMessage());
+            }
+            case Player2Win -> {
+                return(player2Name + " wins. - " + winnerMsg.getMessage());
+            }
+            case Tie -> {
+                return(winnerMsg.getMessage());
+            }
+        }
         return ("No result");
     }
 

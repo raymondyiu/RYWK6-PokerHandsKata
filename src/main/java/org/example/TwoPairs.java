@@ -78,7 +78,7 @@ public class TwoPairs implements IMatch, IWinner {
 
         return winnerMsg;
     }
-    public WinnerMsg higherScore(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, WinnerMsg winnerMsg){
+    private WinnerMsg higherScore(ArrayList<Card> player1Cards, ArrayList<Card> player2Cards, WinnerMsg winnerMsg){
         ArrayList<Card> twoPairsCards1 = findTwoPairs(player1Cards);
         ArrayList<Card> twoPairsCards2 = findTwoPairs(player2Cards);
         int score1=0;
