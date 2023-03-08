@@ -8,7 +8,6 @@ public class FullHouse implements IMatch, IWinner{
     private Map<String, String> targetThreeOfAKind;
 
     private Map<String, String> targetPair;
-    private Rank rank = Rank.FullHouse;
 
     FullHouse(){
         targetThreeOfAKind = new HashMap<>();
@@ -18,9 +17,6 @@ public class FullHouse implements IMatch, IWinner{
             targetThreeOfAKind.put(cardValue.label(), cardValue.label() + cardValue.label() + cardValue.label());
             targetPair.put(cardValue.label(), cardValue.label()+cardValue.label());
         }
-    }
-    public int getScore() {
-        return rank.score;
     }
     public boolean isMatch(ArrayList<Card> cards) {
         String cardList="";

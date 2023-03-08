@@ -8,7 +8,6 @@ import java.util.Map;
 public class StraightFlush implements IMatch,IWinner {
 
     private Map<String, String> target;
-    private Rank rank = Rank.StraightFlush;
     private int HIGHEST_SCORE_CARD_INDEX=4;
 
     StraightFlush(){
@@ -24,9 +23,6 @@ public class StraightFlush implements IMatch,IWinner {
         }
     }
 
-    public int getScore() {
-        return rank.score();
-    }
     @Override
     public boolean isMatch(ArrayList<Card> cards) {
         String cardList="";

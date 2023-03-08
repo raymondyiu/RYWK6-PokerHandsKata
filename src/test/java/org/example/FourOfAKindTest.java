@@ -14,13 +14,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FourOfAKindTest {
-
-
-    @Test
-    void isGetScore(){
-        FourOfAKind fourOfAKind = new FourOfAKind();
-        assertEquals(7000, fourOfAKind.getScore());
-    }
     @Test
     void isMatch() {
 

@@ -16,12 +16,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StraightFlushTest {
-
-    @Test
-    void isGetScore(){
-        StraightFlush straightFlush = new StraightFlush();
-        assertEquals(8000, straightFlush.getScore());
-    }
     @Test
     void isMatchCheck() {
         StraightFlush straightFlush = new StraightFlush();

@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class ThreeOfAKind implements IMatch, IWinner{
     private Map<String, String> target;
-    private Rank rank = Rank.ThreeOfAKind;
 
     ThreeOfAKind(){
         target = new HashMap<>();
@@ -14,9 +13,6 @@ public class ThreeOfAKind implements IMatch, IWinner{
         for (CardValue cardValue : CardValue.values()){
             target.put(cardValue.label(), cardValue.label()+cardValue.label() + cardValue.label());
         }
-    }
-    public int getScore() {
-        return rank.score;
     }
 
     public boolean isMatch(ArrayList<Card> cards) {

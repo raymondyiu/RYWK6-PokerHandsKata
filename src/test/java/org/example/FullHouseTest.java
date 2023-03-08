@@ -8,13 +8,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FullHouseTest {
-
-    @Test
-    void getScore() {
-        FullHouse fullHouse= new FullHouse();
-        assertEquals(6000, fullHouse.getScore());
-    }
-
     @Test
     void isMatch() {
         FullHouse fullHouse = new FullHouse();

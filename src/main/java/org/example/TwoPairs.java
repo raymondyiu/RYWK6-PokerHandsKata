@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class TwoPairs implements IMatch, IWinner {
     private Map<String, String> target;
-    private Rank rank = Rank.TwoPairs;
 
     int FIRST_PAIR_INDEX = 0;
     int SECOND_PAIR_INDEX =1;
@@ -17,9 +16,7 @@ public class TwoPairs implements IMatch, IWinner {
             target.put(cardValue.label(), cardValue.label()+cardValue.label());
         }
     }
-    public int getScore() {
-        return rank.score;
-    }
+
     public boolean isMatch(ArrayList<Card> cards) {
         String cardList="";
         Map<String,String> targetCopy = new HashMap<>();

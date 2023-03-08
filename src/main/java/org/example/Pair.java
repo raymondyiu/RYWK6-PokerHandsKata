@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class Pair implements IMatch, IWinner{
     private Map<String, String> target;
-    private Rank rank = Rank.Pair;
 
     int MAX_SINGLE_CARD_INDEX =2;
 
@@ -15,9 +14,6 @@ public class Pair implements IMatch, IWinner{
         for (CardValue cardValue : CardValue.values()){
             target.put(cardValue.label(), cardValue.label()+cardValue.label());
         }
-    }
-    public int getScore() {
-        return rank.score;
     }
     public boolean isMatch(ArrayList<Card> cards) {
         String cardList="";

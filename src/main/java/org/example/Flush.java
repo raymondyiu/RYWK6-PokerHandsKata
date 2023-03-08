@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class Flush implements IMatch, IWinner{
     private Map<String, String> target;
-    private Rank rank = Rank.Flush;
 
     private int HIGHEST_SCORE_CARD_INDEX=4;
 
@@ -21,10 +20,6 @@ public class Flush implements IMatch, IWinner{
 
             target.put(suit.label(), str);
         }
-    }
-
-    public int getScore() {
-        return rank.score();
     }
 
     public boolean isMatch(ArrayList<Card> cards) {

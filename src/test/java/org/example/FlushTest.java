@@ -8,12 +8,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FlushTest {
-
-    @Test
-    void isGetScore(){
-        Flush flush = new Flush();
-        assertEquals(5000, flush.getScore());
-    }
     @Test
     void isMatch() {
 

@@ -8,13 +8,6 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StraightTest {
-
-    @Test
-    void getScore() {
-        Straight straight = new Straight();
-        assertEquals(4000, straight.getScore());
-    }
-
     @Test
     void isMatch() {
         Straight straight = new Straight();

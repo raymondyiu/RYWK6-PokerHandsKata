@@ -6,8 +6,6 @@ import java.util.Map;
 
 public class FourOfAKind implements IMatch, IWinner{
     private Map<String, String> target;
-    private Rank rank = Rank.FourOfAKind;
-
     FourOfAKind(){
         target = new HashMap<>();
 
@@ -19,9 +17,6 @@ public class FourOfAKind implements IMatch, IWinner{
             }
             target.put(cardValue.label(), str);
         }
-    }
-    public int getScore() {
-        return rank.score;
     }
 
     public boolean isMatch(ArrayList<Card> cards) {

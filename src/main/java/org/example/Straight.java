@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class Straight implements IMatch, IWinner{
     private String target;
-    private Rank rank = Rank.Straight;
     private int HIGHEST_SCORE_CARD_INDEX=4;
     Straight(){
         target = "";
@@ -15,9 +14,6 @@ public class Straight implements IMatch, IWinner{
         }
     }
 
-    public int getScore() {
-        return rank.score();
-    }
     @Override
     public boolean isMatch(ArrayList<Card> cards) {
         String cardList="";

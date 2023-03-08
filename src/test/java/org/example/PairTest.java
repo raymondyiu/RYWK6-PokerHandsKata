@@ -10,12 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class PairTest {
 
     @Test
-    void getScore() {
-        Pair pair = new Pair();
-        assertEquals(1000, pair.getScore());
-    }
-
-    @Test
     void isMatch() {
         Pair pair = new Pair();
         ArrayList<Card> cards = new ArrayList<Card>();

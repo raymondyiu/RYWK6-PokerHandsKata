@@ -10,12 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class ThreeOfAKindTest {
 
     @Test
-    void getScore() {
-        ThreeOfAKind threeOfAKind = new ThreeOfAKind();
-        assertEquals(3000, threeOfAKind.getScore());
-    }
-
-    @Test
     void isMatch() {
         ThreeOfAKind threeOfAKind = new ThreeOfAKind();
         ArrayList<Card> cards = new ArrayList<Card>();
