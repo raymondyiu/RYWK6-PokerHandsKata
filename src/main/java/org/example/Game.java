@@ -157,6 +157,7 @@ public class Game {
                 return(winnerMsg.getMessage());
             }
         }
+
         return ("No result");
     }
 
