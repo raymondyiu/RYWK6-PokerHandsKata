@@ -21,6 +21,7 @@ public class AllSingle implements IWinner {
             }
         }
         if (score1 == score2){
+            winnerMsg.setWinner(WinEnum.Tie);
             winnerMsg.setMessage("Tie.");
         } else if (score1 > score2){
             winnerMsg.setWinner(WinEnum.Player1Win);
