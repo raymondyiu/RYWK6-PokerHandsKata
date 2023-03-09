@@ -3,6 +3,8 @@ package org.example;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -30,12 +32,26 @@ class AllSingleTest {
                 card = new Card(cardStr);
                 cards1.add(card);
             }
+            Collections.sort(cards1, new Comparator<Card>() {
+                        public int compare(final Card lhs, Card rhs) {
+                            return (lhs.getCardValue().score() - rhs.getCardValue().score());
+                        }
+
+                    }
+            );
             cardList = item[2].split(" ");
             for (String cardStr : cardList) {
 
                 card = new Card(cardStr);
                 cards2.add(card);
             }
+            Collections.sort(cards2, new Comparator<Card>() {
+                        public int compare(final Card lhs, Card rhs) {
+                            return (lhs.getCardValue().score() - rhs.getCardValue().score());
+                        }
+
+                    }
+            );
             winnerMsg = allSingle.whoWin(cards1, cards2,"with high card: ");
 
             assertEquals(item[0], winnerMsg.getMessage() );

@@ -30,6 +30,7 @@ public class Game {
             Card card = new Card(items[i]);
             cards1.add(card);
         }
+        // sort porker hand order by the CardValue enum's score
         Collections.sort(cards1, new Comparator<Card>() {
             public int compare(final Card lhs, Card rhs) {
                 return (lhs.getCardValue().score() - rhs.getCardValue().score());
