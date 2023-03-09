@@ -26,3 +26,5 @@ White wins. - with pair: Jack,Black: JH KS 7C 8D 4H White: 9S JC AH JH TC
 Black wins. - with pair: Ace,Black: AH 2S KC AD 9H White: 4S 5C AH JH TC
 Tie.,Black: 2S 2H 6H 8C TC White: TC 6D 8S 2D 2H
 White wins. - with pair: Ace,Black: 4S 2H 5H AC AS White: AC AD 5S 4D 3H
+Black wins. - with high card: Ace,Black: 2S JC QS KS AS White: 2C 4S 6H 8D TS
+White wins. - with high card: 3,Black: 2C 4D 6C 9S TS White: 3H 4D 6C 9S TS
