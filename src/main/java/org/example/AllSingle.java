@@ -23,8 +23,10 @@ public class AllSingle implements IWinner {
         if (score1 == score2){
             winnerMsg.setMessage("Tie.");
         } else if (score1 > score2){
+            winnerMsg.setWinner(WinEnum.Player1Win);
             winnerMsg.setMessage(winnerMsg.getMessage()+ card1.getCardValue().value());
         } else {
+            winnerMsg.setWinner(WinEnum.Player2Win);
             winnerMsg.setMessage(winnerMsg.getMessage()+ card2.getCardValue().value());
         }
         return (winnerMsg);

@@ -158,7 +158,19 @@ public class Game {
                 return(winnerMsg.getMessage());
             }
         }
-
+        AllSingle allSingle = new AllSingle();
+        winnerMsg = allSingle.whoWin(cards1, cards2, "with high card: ");
+        switch (winnerMsg.getWinner()){
+            case Player1Win -> {
+                return(player1Name + " wins. - " + winnerMsg.getMessage());
+            }
+            case Player2Win -> {
+                return(player2Name + " wins. - " + winnerMsg.getMessage());
+            }
+            case Tie -> {
+                return(winnerMsg.getMessage());
+            }
+        }
         return ("No result");
     }
 
