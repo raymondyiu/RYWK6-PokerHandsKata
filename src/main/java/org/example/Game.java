@@ -21,7 +21,7 @@ public class Game {
         cards1 = new ArrayList<>();
         cards2 = new ArrayList<>();
 
-        String[] items = line.split(" ");
+        String[] items = line.replaceAll("\\s+", " ").split(" ");
         player1Name = items[PLAYER1_INDEX].substring(0,items[PLAYER1_INDEX].length()-1);
         player2Name = items[PLAYER2_INDEX].substring(0,items[PLAYER2_INDEX].length()-1);
 

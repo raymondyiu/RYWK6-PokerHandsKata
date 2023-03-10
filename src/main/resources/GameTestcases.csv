@@ -29,3 +29,4 @@ White wins. - with pair: Ace,Black: 4S 2H 5H AC AS White: AC AD 5S 4D 3H
 Black wins. - with high card: Ace,Black: 2S JC QS KS AS White: 2C 4S 6H 8D TS
 White wins. - with high card: 3,Black: 2C 4D 6C 9S TS White: 3H 4D 6C 9S TS
 Tie.,Black: 3C 4D 6C 9S TS White: 3H 4D 6C 9S TS
+White wins. - with high card: Ace,Black: 2H 3D 5S 9C KD  White: 2C 3H 4S 8C AH
